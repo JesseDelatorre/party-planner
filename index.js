@@ -27,4 +27,5 @@ state.nameOfParty.forEach((singleParty) =>{
   partyUl.append(li);
 })
 }
+
 getParties();
