@@ -23,7 +23,9 @@ const partyUl = document.querySelector(`ul`);
 partyUl.innerHTML = ``;
 state.nameOfParty.forEach((singleParty) =>{
   const li = document.createElement(`li`);
+
   li.innerText = `PARTY NAME: ${singleParty.name} .\n DESCRIPTION: ${singleParty.description} .\n DATE AND TIME: ${singleParty.date} .\n LOCATION: ${singleParty.location}`;
+  
   partyUl.append(li);
 })
 }
