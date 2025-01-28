@@ -7,7 +7,7 @@ const state = {
 
 }
 
-const getParties = async() => {
+const getParties = async () => {
   const response = await fetch(`https://fsa-crud-2aa9294fe819.herokuapp.com/api/2501-ftb-et-web-ft/events`)
   const jsonObject = await response.json();
   // console.log(jsonObject);
@@ -19,15 +19,15 @@ const getParties = async() => {
 }
 //function to render to page
 const renderEvents = () => {
-const partyUl = document.querySelector(`ul`);
-partyUl.innerHTML = ``;
-state.nameOfParty.forEach((singleParty) =>{
-  const li = document.createElement(`li`);
+  const partyUl = document.querySelector(`ul`);
+  partyUl.innerHTML = ``;
+  state.nameOfParty.forEach((singleParty) => {
+    const li = document.createElement(`li`);
 
-  li.innerText = `PARTY NAME: ${singleParty.name} .\n DESCRIPTION: ${singleParty.description} .\n DATE AND TIME: ${singleParty.date} .\n LOCATION: ${singleParty.location}`;
-  
-  partyUl.append(li);
-})
+    li.innerText = `PARTY NAME: ${singleParty.name} .\n DESCRIPTION: ${singleParty.description} .\n DATE AND TIME: ${singleParty.date} .\n LOCATION: ${singleParty.location}`;
+
+    partyUl.append(li);
+  })
 }
 
 getParties();
